@@ -103,10 +103,7 @@ app.get("/logout", auth, async (req, res) => {
   }
 });
 
-app.get("/newuser", auth, (req, res) => {
-  // res.sendFile(`${static_path}/newuser1.html`);
-  res.render("newuser1",{user:newUser});
-});
+
 //yahan pe template engin ka use karne ke liye hum get methon laga ke apni file ko send kar sakte h
 //aur file ka extension bhi chupa sakte h
 // app.get("/about", (req, res) => {
