@@ -32,7 +32,7 @@
                                 </tr>
                             </tfoot>
                             <tbody>
-                                <%ticketdatalist.forEach(user => {%>
+                                <%ticketdatalist.reverse().forEach(user => {%>
                                 <tr>
                                     <td><%=user.full_name%></td>
                                     <td><%=user.user_id%></td>

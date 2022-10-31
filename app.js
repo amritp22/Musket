@@ -72,10 +72,10 @@ app.get("/adminpanel", (req, res) => {
 })
   
 });
-app.get("/user_ticketList",function(req,res){
-  TicketForm.find({}, function(err, data) {
+app.get("/userticketlist",function(req,res){
+  TicketForm.find({}, function(err, udata) {
     res.render('userticketlist', {
-      ticketdatalist: data,
+      ticketdatalist: udata,
       
     })
 })
@@ -264,7 +264,8 @@ app.post('/bookingform',function(req,res){
     time:req.body.time,
     
   });
-  // ticketformData.save();
+
+  ticketformData.save();
   
   // console.log(ticketformData);
   let stringdata = JSON.stringify(ticketformData)
@@ -275,7 +276,7 @@ app.post('/bookingform',function(req,res){
        qr_code:src,Museum:ticketformData.Museum,name1:ticketformData.full_name
     })
     
-    ticketformData.save();
+    // ticketformData.save();
 
   })
   
